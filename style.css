@@ -1,0 +1,245 @@
+#start {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 90%;
+  color: #ffffff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+#help {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000;
+  transition: opacity 0.3s, transform 0.2s, background-color 0.3s;
+}
+
+#help:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+#help:active {
+  opacity: 0.6;
+  transform: scale(0.95);
+}
+
+
+#start:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+#start:active {
+  background-color: #3e8e41;
+  transform: scale(0.95);
+}
+
+
+  
+  footer {
+    margin-top: 10px;
+  }
+  
+  /* Global Styles */
+body {
+ // display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #005475, #4157ba);
+  font-family: Arial, sans-serif;
+}
+
+#status {
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 4px;
+}
+
+
+footer {
+  text-align: center;
+  color: #ffffff;
+  
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+#boardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ // border: 1px solid white;
+}
+
+/* Board Styles */
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  padding: 15px;
+  background-color: #2d3a75;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+#board:hover {
+  transform: scale(1.5);
+}
+
+/* Tile Styles */
+.cell {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6em;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Tile Colors */
+/*
+.cell:nth-child(1) { background-color: #f76c6c; }
+.cell:nth-child(2) { background-color: #ffb677; }
+.cell:nth-child(3) { background-color: #f5d547; }
+.cell:nth-child(4) { background-color: #6cf0e0; }
+.cell:nth-child(5) { background-color: #8ceea3; }
+.cell:nth-child(6) { background-color: #6c83f7; }
+.cell:nth-child(7) { background-color: #f76cb1; }
+.cell:nth-child(8) { background-color: #a36cf7; }
+.cell:nth-child(9) { background-color: #a33ca7; }
+*/
+
+/* Empty tile styling */
+.tile:empty {
+  background-color: #e0e0e0;
+  cursor: default;
+  box-shadow: none;
+}
+
+/* Tile hover and active effects */
+.cell:hover {
+  transform: scale(2.5);
+}
+.cell.highlight {
+  transform: scale(0.95);
+  
+}
+
+  
+.cell.selected {
+  background: blue;
+}
+  
+  
+  .cell.highlight {
+  outline: 3px solid #ffcc00;
+  box-shadow: 0 0 10px #ffcc00;
+  transition: box-shadow 0.3s ease;
+  background: grey;
+}
+  
+
+
+/* Dialog Styling */
+dialog {
+  width: 400px;
+  max-width: 90%;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Dialog Header */
+.dialog-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #007BFF;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Dialog Body */
+.dialog-body {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.dialog-body ul, .dialog-body ol {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.dialog-body ul li, .dialog-body ol li {
+  margin-bottom: 5px;
+}
+
+/* Dialog Footer */
+.dialog-footer {
+  text-align: right;
+}
+
+.dialog-footer button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dialog-footer button:hover {
+  background-color: #0056b3;
+}
+
+.dialog-footer button:active {
+  background-color: #003f7f;
+}

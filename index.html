@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="author" content="Ishaku Yusuf Maina">
+  <!-- Latest compiled and minified CSS -->
+  <link href="style.css" rel="stylesheet">
+  <script src="script.js"></script>
+</head>
+<body>
+  <button id="help">?</button>
+  <hr>
+  <h1>
+    3 Center Game
+  </h1>
+  <dialog id="myDialog">
+  <div class="dialog-header">3 Center Game Rules</div>
+  <div class="dialog-body">
+    <p><strong>Overview</strong><br>
+    3 Center is a two-player game played on a 3x3 board. Each player takes turns and uses a unique seed ("X" or "O") to play. A player can:</p>
+    <ul>
+      <li>Place a seed on an empty cell.</li>
+      <li>Select one of their own seeds on the board.</li>
+      <li>Move a selected seed to another cell.</li>
+    </ul>
+    <p><strong>Game Constraints</strong></p>
+    <ol>
+      <li><strong>General Rules</strong>
+        <ul>
+          <li>A player can only play during their turn.</li>
+          <li>A player can only interact with their own seeds.</li>
+        </ul>
+      </li>
+      <li><strong>Placing a Seed</strong>
+        <ul>
+          <li>A player may only place a seed if they have fewer than 3 seeds on the board.</li>
+          <li>The chosen cell must be empty.</li>
+        </ul>
+      </li>
+      <li><strong>Selecting a Seed for Moving</strong>
+        <ul>
+          <li>A player may only select a seed if it belongs to them.</li>
+          <li>The player must already have 3 seeds on the board.</li>
+        </ul>
+      </li>
+      <li><strong>Moving a Seed</strong>
+        <ul>
+          <li>The seed to be moved must be selected.</li>
+          <li>The target cell must be empty and adjacent to the selected cell.</li>
+        </ul>
+      </li>
+    </ol>
+    <p><strong>Winning Condition</strong><br>
+    A player wins by arranging their 3 seeds in a centered line—vertically, horizontally, or diagonally.</p>
+    
+  </div>
+  <div class="dialog-footer">
+    <small>
+      —Dr Maina
+    </small>
+    <br>
+    <a href="https://wa.me/2349045060362" target="_blank">Chat with us on WhatsApp</a>
+    <br>
+    <button id="closeDialog">Close</button>
+  </div>
+</dialog>
+
+  <hr>
+  <div id="boardContainer">
+    <button id="start">Start</button>
+  </div>
+  <hr>
+  <div id="status"></div>
+  <footer>
+    <small>©I. Y Maina</small>
+  </footer>
+  <script>
+  const board = new Model(3);
+  const status = document.getElementById("status");
+ start.onclick = ()=>{
+   animate();
+ }
+  
+  
+  // Script for handling the dialog
+    const openDialog = document.getElementById('help');
+    const closeDialog = document.getElementById('closeDialog');
+    const myDialog = document.getElementById('myDialog');
+
+    openDialog.addEventListener('click', () => {
+      myDialog.showModal();
+    });
+
+    closeDialog.addEventListener('click', () => {
+      myDialog.close();
+    });
+  
+  </script>
+<style>
+</style>
+</body>
+</html>
